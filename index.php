@@ -27,7 +27,7 @@ $CalculatorResult = $FirstNumber / $SecondNumber;
 
 <body>
 <div id="page-wrap">
-<h1>PHP - Simple Calculator Program</h1>
+<h1>PHP - Simple Calculator Program by fbwlab35</h1>
 <form action="" method="post" id="quiz-form">
 <p>
 <input type="number" name="FirstNumber" id="FirstNumber" required="required" value="<?php echo $FirstNumber; ?>" /> <b>First Number</b>
@@ -36,7 +36,7 @@ $CalculatorResult = $FirstNumber / $SecondNumber;
 <input type="number" name="SecondNumber" id="SecondNumber" required="required" value="<?php echo $SecondNumber; ?>" /> <b>Second Number</b>
 </p>
 <p>
-<input readonly="readonly" name="CalculatorResult" value="<?php echo $CalculatorResult; ?>"> <b>CalculatorResult</b>
+<input readonly="readonly" name="CalculatorResult" value="<?php echo $Calculator Result; ?>"> <b>Calculator Result</b>
 </p>
 <input type="submit" name="operator" value="Sum" />
 <input type="submit" name="operator" value="Subtraction" />
