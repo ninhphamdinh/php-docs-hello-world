@@ -36,7 +36,7 @@ $CalculatorResult = $FirstNumber / $SecondNumber;
 <input type="number" name="SecondNumber" id="SecondNumber" required="required" value="<?php echo $SecondNumber; ?>" /> <b>Second Number</b>
 </p>
 <p>
-<input readonly="readonly" name="CalculatorResult" value="<?php echo $Calculator Result; ?>"> <b>Calculator Result</b>
+<input readonly="readonly" name="CalculatorResult" value="<?php echo $Calculator Result; ?>"> <b>CalculatorResult</b>
 </p>
 <input type="submit" name="operator" value="Sum" />
 <input type="submit" name="operator" value="Subtraction" />
