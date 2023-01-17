@@ -1,30 +1,48 @@
+<!DOCTYPE html>
+<head>
+<title> Write a simple calculator program in PHP using the switch statement by T4Tutorials.com
+ </title>
+</head>
 <?php
 $FirstNumber = $_POST['FirstNumber'];
 $SecondNumber = $_POST['SecondNumber'];
-$Result = $_POST['Result'];
-
-    function MyCalculator($Number1,$Number2, $Result) 
-// set $Result as parameter
-    {
-        switch($Result)
-        {
-        case "Addition": 
-// here you have to use colons not semi-colons
-            $compute = $Number1 + $Number2; 
-            break;
-        case "Subtraction":
-            $compute = $Number1 - $Number2; 
-            break;
-        case "Multiplication":
-            $compute = $Number1 * $Number2; 
-            break;
-        case "Division":
-            $compute = $Number1 / $Number2; 
-            break;
-        }
-        return $compute; // returning variable
-    }
-echo "$Result <br /> <br /> 1st Number: $FirstNumber <br /> 2nd Number: $SecondNumber <br /><br />";
-echo "Answer is:" .MyCalculator($FirstNumber,$SecondNumber, $Result);
- // you need to pass $Result as argument of that function
+$operator = $_POST['operator'];
+$CalculatorResult = '';
+if (is_numeric($FirstNumber) && is_numeric($SecondNumber)) {
+switch ($operator) {
+case "Sum":
+$CalculatorResult = $FirstNumber + $SecondNumber;
+break;
+case "Subtraction":
+ $CalculatorResult = $FirstNumber - $SecondNumber;
+break;
+case "Multiplication":
+$CalculatorResult = $FirstNumber * $SecondNumber;
+break;
+case "Division":
+$CalculatorResult = $FirstNumber / $SecondNumber;
+}
+}
 ?>
+
+<body>
+<div id="page-wrap">
+<h1>PHP - Simple Calculator Program</h1>
+<form action="" method="post" id="quiz-form">
+<p>
+<input type="number" name="FirstNumber" id="FirstNumber" required="required" value="<?php echo $FirstNumber; ?>" /> <b>First Number</b>
+</p>
+<p>
+<input type="number" name="SecondNumber" id="SecondNumber" required="required" value="<?php echo $SecondNumber; ?>" /> <b>Second Number</b>
+</p>
+<p>
+<input readonly="readonly" name="CalculatorResult" value="<?php echo $CalculatorResult; ?>"> <b>CalculatorResult</b>
+</p>
+<input type="submit" name="operator" value="Sum" />
+<input type="submit" name="operator" value="Subtraction" />
+<input type="submit" name="operator" value="Multiplication" />
+<input type="submit" name="operator" value="Division" />
+</form>
+</div>
+</body>
+</html>
